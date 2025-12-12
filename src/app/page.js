@@ -1,6 +1,3 @@
-export const revalidate = 60;
-
-
 import { createClient } from "@/prismicio";
 import { SliceZone } from "@prismicio/react";
 import { components } from "@/slices";
