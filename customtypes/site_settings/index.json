@@ -1,0 +1,113 @@
+{
+  "format": "custom",
+  "id": "site_settings",
+  "label": "Site settings",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "header_logo": {
+        "type": "Image",
+        "config": {
+          "label": "Header logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "header_nav": {
+        "type": "Group",
+        "config": {
+          "label": "Header nav",
+          "repeat": true,
+          "fields": {
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "select": null,
+                "allowTargetBlank": true,
+                "allowText": true,
+                "repeat": false
+              }
+            }
+          }
+        }
+      },
+      "header_cta": {
+        "type": "Link",
+        "config": {
+          "label": "Header Cta",
+          "placeholder": "",
+          "select": null,
+          "allowTargetBlank": true,
+          "allowText": true,
+          "repeat": false
+        }
+      },
+      "footer_logo": {
+        "type": "Image",
+        "config": {
+          "label": "Footer logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "footer_description": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Footer description",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "footer_copyright": {
+        "type": "Text",
+        "config": {
+          "label": "Footer copyright",
+          "placeholder": ""
+        }
+      },
+      "footer_socials": {
+        "type": "Group",
+        "config": {
+          "label": "Footer socials",
+          "repeat": true,
+          "fields": {
+            "icon": {
+              "type": "Image",
+              "config": {
+                "label": "Icon",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "select": null,
+                "allowTargetBlank": true,
+                "allowText": true,
+                "repeat": false
+              }
+            }
+          }
+        }
+      },
+      "footer_privacy_policy": {
+        "type": "Link",
+        "config": {
+          "label": "Footer Privacy policy",
+          "placeholder": "",
+          "select": null,
+          "allowTargetBlank": true,
+          "allowText": true,
+          "repeat": false
+        }
+      }
+    }
+  }
+}

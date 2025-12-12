@@ -1,0 +1,30 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"pretitle": {
+				"__TYPE__": "FieldContent",
+				"value": "mixture",
+				"type": "Text"
+			},
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Eu ea do nostrud magna fugiat veniam. Ad irure consectetur dolore excepteur voluptate qui deserunt deserunt voluptate deserunt ea labore."
+						}
+					}
+				]
+			},
+			"text": {
+				"__TYPE__": "FieldContent",
+				"value": "ordinary",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

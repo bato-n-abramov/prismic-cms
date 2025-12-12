@@ -1,0 +1,217 @@
+@use "../../styles/mixins" as *;
+
+.story-intro {
+    overflow-x: clip;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 120px 0;
+
+        @include m1024 {
+            padding: 100px 0;
+        }
+    }
+
+    &__pretitle {
+        color: rgba(255, 255, 255, 0.4);
+        margin-bottom: 16px;
+    }
+
+    &__title {
+        max-width: 990px;
+        margin-bottom: 25px;
+        margin-inline: auto;
+    }
+
+    &__text {
+        max-width: 670px;
+        margin-inline: auto;
+        color: var(--color-grey);
+    }
+
+    &__subtitle.site-text {
+        color: var(--color-primary);
+        font-family: var(--font-arial);
+        font-size: 1.5rem;
+    }
+
+    &__middle {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+        margin: 80px 0;
+        padding: 60px 0 35px;
+        gap: 20px;
+        text-align: left;
+
+        @include m1024 {
+            flex-direction: column;
+            margin: 40px 0;
+        }
+    }
+
+    &__description {
+        max-width: 700px;
+        font-family: var(--font-montserrat);
+        font-size: 1.75rem;
+        line-height: 1.3;
+        color: #353535;
+
+        &--top {
+            margin-bottom: 80px;
+
+            @include m1024 {
+                margin-bottom: 40px;
+            }
+        }
+
+        @include m1024 {
+            max-width: 100%;
+            font-size: 1.25rem;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 100%;
+
+        @include m767 {
+            flex-direction: column;
+        }
+    }
+
+    &__image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: calc(33.33% - 14px);
+        background: rgba(255, 255, 255, 0.05);
+
+        @include m767 {
+            width: 100%;
+            height: 255px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: calc(33.33% - 14px);
+        padding: 50px 30px;
+        background: rgba(255, 255, 255, 0.05);
+
+        @include m767 {
+            width: 100%;
+        }
+
+        &__image {
+            height: 255px;
+            padding: 0;
+        }
+
+        &-title {
+            display: flex;
+            font-size: 3.875rem;
+            line-height: 1.3;
+            margin-bottom: 10px;
+            color: var(--color-primary);
+            font-weight: 700;
+            font-family: var(--font-arial);
+
+            @include m1024 {
+                font-size: 3.75rem;
+            }
+        }
+
+        &-text {
+            max-width: 570px;
+            font-size: 1.125rem;
+            line-height: 1.3;
+            color: var(--color-grey);
+
+            @include m1024 {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    &__logos-wrapper {
+        display: flex;
+        margin-top: 120px;
+
+        @include m1024 {
+            margin-top: 80px;
+            gap: 40px;
+        }
+    }
+
+    &__logos-list {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
+        width: max-content;
+        will-change: transform;
+        backface-visibility: hidden;
+        animation-name: ticker;
+        animation-duration: 30s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+
+        @include m1024 {
+            gap: 40px;
+        }
+    }
+
+    &__logos-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 210px;
+        height: 210px;
+        aspect-ratio: 1 / 1;
+        transition: var(--transition);
+
+        @include m1024 {
+            width: 180px;
+            height: 180px;
+        }
+
+        @include m767 {
+            width: 100px;
+            height: 100px;
+        }
+
+        svg,
+        img {
+            height: auto;
+            width: auto;
+        }
+    }
+}
+
+@keyframes ticker {
+    from {
+        translate: 0 0;
+    }
+
+    to {
+        translate: -100% 0;
+    }
+}

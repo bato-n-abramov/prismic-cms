@@ -1,0 +1,30 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+.container {
+    width: 100%;
+    margin: auto;
+    max-width: var(--base-container-width);
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @include m1199 {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    @include m991 {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    @include m767 {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    @include m575 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

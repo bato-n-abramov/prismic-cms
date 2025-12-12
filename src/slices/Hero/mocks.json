@@ -1,0 +1,40 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Nostrud pariatur consectetur nisi non culpa sit do. Est et laborum quis qui mollit dolor ut est cillum qui sint. Dolor non ex culpa sit sint ullamco qui dolor nulla deserunt tempor ipsum pariatur."
+						}
+					}
+				]
+			},
+			"button_link": {
+				"key": "b8ebd910-6d47-4553-83c4-7f7942c5b375",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com",
+					"text": "teach"
+				}
+			},
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Veniam incididunt irure consectetur enim aute incididunt minim voluptate. Quis labore cupidatat in."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

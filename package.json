@@ -1,0 +1,35 @@
+{
+  "name": "stepwise-prismic",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "slicemachine": "start-slicemachine"
+  },
+  "dependencies": {
+    "@prismicio/client": "^7.21.0",
+    "@prismicio/next": "^2.0.2",
+    "@prismicio/react": "^3.2.2",
+    "@studio-freight/lenis": "^1.0.42",
+    "flatpickr": "^4.6.13",
+    "formik": "^2.4.9",
+    "gsap": "^3.14.1",
+    "motion": "^12.23.26",
+    "next": "16.0.8",
+    "react": "19.2.1",
+    "react-dom": "19.2.1",
+    "react-flatpickr": "^4.0.11",
+    "resend": "^6.6.0",
+    "sass": "^1.96.0",
+    "yup": "^1.7.1"
+  },
+  "devDependencies": {
+    "@slicemachine/adapter-next": "^0.3.89",
+    "eslint": "^9",
+    "eslint-config-next": "16.0.8",
+    "slice-machine-ui": "^2.20.2"
+  }
+}

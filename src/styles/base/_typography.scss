@@ -1,0 +1,156 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+.h {
+    font-family: var(--font-arial);
+    font-weight: 700;
+    line-height: 1.21;
+    margin: 0 0 0.5em;
+    color: inherit;
+}
+
+h1,
+.h1 {
+    font-size: var(--headings-sizes-h1);
+    font-weight: 600;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    line-height: 1;
+}
+
+h2,
+.h2 {
+    font-size: var(--headings-sizes-h2);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    margin-top: 2.5rem;
+    line-height: 1.2;
+}
+
+h3,
+.h3 {
+    font-size: var(--headings-sizes-h3);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+h4,
+.h4 {
+    font-size: var(--headings-sizes-h4);
+    margin-bottom: 1.125rem;
+    margin-top: 2rem;
+}
+
+h5,
+.h5 {
+    font-size: var(--headings-sizes-h5);
+    margin-bottom: 1.125rem;
+    margin-top: 2rem;
+}
+
+h6,
+.h6 {
+    font-size: var(--headings-sizes-h6);
+    margin-bottom: 1.125rem;
+    margin-top: 2rem;
+}
+
+a {
+    color: inherit;
+    transition: color var(--transition);
+    font-family: inherit;
+
+    &:hover {
+        color: var(--color-primary);
+    }
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0 0 0 1.5em;
+}
+
+.site-title {
+    margin: 0;
+    text-transform: capitalize;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+    }
+
+    strong {
+        position: relative;
+        z-index: 2;
+        font-weight: 600;
+        color: var(--color-primary);
+    }
+}
+
+.site-text {
+    font-size: 1rem;
+    line-height: 1.3;
+    font-weight: 400;
+    font-family: var(--font-montserrat);
+
+    &.big {
+        font-size: 1.125rem;
+    }
+
+    &.small {
+        font-size: 0.875rem;
+    }
+
+    &.pretitle {
+        font-family: var(--base-font-family);
+        font-size: 1.25rem;
+
+        @include m1024 {
+            font-size: 1rem;
+        }
+    }
+
+    @include m1024 {
+        font-size: 1rem;
+    }
+
+    &,
+    & > p,
+    & > ul,
+    & > ol,
+    & > blockquote,
+    & > figure,
+    & > img {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.site-link {
+    color: var(--color-primary);
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover {
+        color: var(--color-primary);
+    }
+}

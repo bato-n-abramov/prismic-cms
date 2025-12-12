@@ -1,0 +1,54 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+@mixin btn-base {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: fit-content;
+    max-width: 100%;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 12px 32px;
+    border-radius: 4px;
+    font-weight: 600;
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 16;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: var(--font-arial);
+    height: 48px;
+
+    &.white {
+        background-color: var(--color-white);
+        color: var(--color-black);
+        border: none;
+        height: 60px;
+    }
+
+    @include m575 {
+        font-size: 1rem;
+    }
+
+    &:hover {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+    }
+}
+
+.site-button {
+    &,
+    &.default,
+    &.current {
+        @include btn-base;
+    }
+
+    &[disabled],
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.45;
+        cursor: auto;
+    }
+}

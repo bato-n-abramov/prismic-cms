@@ -1,0 +1,145 @@
+@use "../../styles/mixins" as *;
+
+.testimonials {
+    position: relative;
+    overflow-x: clip;
+
+    &__radial-item {
+        position: absolute;
+        width: 750px;
+        background: var(--color-primary);
+        filter: blur(640px);
+        aspect-ratio: 1;
+        z-index: 1;
+        border-radius: 50%;
+        opacity: 0.4;
+
+        @include m1024 {
+            display: none;
+        }
+
+        .firefox & {
+            opacity: 0.05;
+            filter: blur(700px);
+        }
+
+        &_1 {
+            left: -40%;
+            bottom: -20%;
+
+            .firefox & {
+                left: -20%;
+            }
+        }
+
+        &_2 {
+            right: -30%;
+            top: 0;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 110px 0 60px;
+        text-align: center;
+    }
+
+    &__pretitle {
+        margin-bottom: 16px;
+        color: var(--color-grey);
+    }
+
+    &__title {
+        max-width: 750px;
+        line-height: 1;
+    }
+
+    &__list {
+        max-width: 1240px;
+        display: flex;
+        gap: 50px;
+        margin-top: 75px;
+        position: relative;
+        z-index: 3;
+
+        @include m1024 {
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__column {
+        width: 100%;
+        max-width: 380px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        @include m1024 {
+            gap: 25px;
+            display: contents;
+        }
+
+        @include m767 {
+            max-width: 100%;
+        }
+
+        &_speed-f {
+            --parallax-intensity: 1s;
+        }
+
+        &_speed-s {
+            --parallax-intensity: 0.5s;
+        }
+
+        &:nth-child(2) {
+            margin-top: 50px;
+        }
+    }
+
+    &__item {
+        padding: 30px;
+        background-color: rgba(255, 255, 255, 0.05);
+        text-align: left;
+
+        @include m1024 {
+            width: 100%;
+            max-width: calc(50% - 13px);
+        }
+
+        @include m767 {
+            max-width: 100%;
+        }
+
+        &-text {
+            margin-bottom: 40px;
+            font-size: 1rem;
+            color: #8f8f8f;
+        }
+
+        &-info {
+            display: flex;
+            gap: 8px;
+        }
+
+        &-image {
+            width: 42px;
+            height: 42px;
+            flex: 0 0 auto;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        &-name {
+            font-weight: 600;
+        }
+
+        &-position {
+            font-size: 0.875rem;
+            font-style: italic;
+            color: #8f8f8f;
+        }
+    }
+}

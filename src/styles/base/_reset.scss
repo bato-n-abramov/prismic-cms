@@ -1,0 +1,49 @@
+@use "../mixins" as *;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: auto;
+}
+
+body {
+    margin: 0 !important;
+    background: var(--color-black);
+    color: var(--color-white);
+    font-family: var(--font-montserrat);
+}
+
+main {
+    padding-top: 90px;
+
+    @include m1199 {
+        padding-top: 65px;
+    }
+}
+
+a {
+    cursor: pointer;
+    outline: none !important;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.hidden {
+    display: none;
+    pointer-events: none;
+}
+
+p {
+    margin: 0;
+}

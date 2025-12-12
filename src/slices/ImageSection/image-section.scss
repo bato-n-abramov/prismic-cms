@@ -1,0 +1,15 @@
+@use "../../styles/mixins" as *;
+
+.image-section {
+    &__image {
+        height: 700px;
+
+        @include m1024 {
+            height: 500px;
+        }
+
+        @include m767 {
+            height: 350px;
+        }
+    }
+}
