@@ -27,7 +27,7 @@ const Header = ({ settings }) => {
         const update = () => {
             ticking = false;
 
-            // ✅ когда меню открыто — никогда не прячем хедер
+
             if (menuOpen) {
                 header.classList.add("sticky");
                 return;
@@ -56,7 +56,7 @@ const Header = ({ settings }) => {
         return () => {
             window.removeEventListener("scroll", onScroll);
         };
-    }, [menuOpen]); // ✅ важно
+    }, [menuOpen]);
 
     useEffect(() => {
         document.body.style.overflow = menuOpen ? "hidden" : "";
@@ -70,7 +70,7 @@ const Header = ({ settings }) => {
     return (
         <header
             ref={headerRef}
-            className={`header site-header ${menuOpen ? "menu-open sticky" : ""}`} // ✅ можно форсить sticky классом тоже
+            className={`header site-header ${menuOpen ? "menu-open sticky" : ""}`} 
         >
             <div className="container">
                 <div className="header__inner">
@@ -87,7 +87,7 @@ const Header = ({ settings }) => {
                         )}
                     </Link>
 
-                    {/* ✅ button вместо div */}
+
                     <button
                         type="button"
                         className="header__burger"
